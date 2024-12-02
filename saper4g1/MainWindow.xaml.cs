@@ -25,5 +25,21 @@ public partial class MainWindow : Window
             plansza.RowDefinitions.Add(new RowDefinition());
             plansza.ColumnDefinitions.Add(new ColumnDefinition());
         }
+
+        for (int i = 0; i < rozmiar; i++)
+        for (int j = 0; j < rozmiar; j++)
+        {
+            Przycisk przycisk = new Przycisk
+            {
+                Wartosc = 0,
+                FontSize = 50,
+                Background = Brushes.LightGray
+            };
+            Grid.SetRow(przycisk, i);
+            Grid.SetColumn(przycisk, j);
+            plansza.Children.Add(przycisk);
+
+
+        }
     }
 }
